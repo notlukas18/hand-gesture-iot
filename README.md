@@ -31,7 +31,7 @@ This project demonstrates a smart, contactless interface where users can control
 
 ## 🛠️ Tech Stack
 
-- **Python 3.8+**
+- **Python 3.11+**
 - **MediaPipe & OpenCV** for hand gesture detection
 - **ESP32** microcontroller with Arduino
 - **HTTP server on ESP32**
