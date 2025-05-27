@@ -16,7 +16,8 @@ This project demonstrates a smart, contactless interface where users can control
 
 ## 🖼️ Demo
 
-<img ![image_2025-05-27_00-38-25](https://github.com/user-attachments/assets/fffeec5d-3928-4404-8d08-440ce62cdf56" width="500"/>
+![image_2025-05-27_00-38-25](https://github.com/user-attachments/assets/a1754ec2-0746-4499-9113-327430af8fe0)
+
 <img src="images/screenshots/gesture_example2.png" width="500"/>
 
 ---
@@ -39,22 +40,6 @@ This project demonstrates a smart, contactless interface where users can control
 - **Wiring Diagram made with Fritzing**
 
 ---
-
-## 📂 Project Structure
-
-
-hand-gesture-iot/
-├── python-client/
-│   └── gesture\_control.py         # Python script for gesture detection and LED control
-├── esp32-code/
-│   └── led\_control.ino            # ESP32 Arduino sketch
-├── images/
-│   ├── wiring\_diagram.png         # Fritzing circuit diagram
-│   └── screenshots/               # System screenshots
-├── README.md
-├── LICENSE
-└── .gitignore
-
 
 ## ⚙️ Setup Instructions
 
