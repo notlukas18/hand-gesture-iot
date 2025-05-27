@@ -18,8 +18,6 @@ This project demonstrates a smart, contactless interface where users can control
 
 ![image_2025-05-27_00-38-25](https://github.com/user-attachments/assets/a1754ec2-0746-4499-9113-327430af8fe0)
 
-<img src="images/screenshots/gesture_example2.png" width="500"/>
-
 ---
 
 ## 🧠 How It Works
