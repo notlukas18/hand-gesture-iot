@@ -106,9 +106,9 @@ Pull requests are welcome! If you'd like to improve gesture recognition, UI, or 
 
 ---
 
-## 🙋‍♂️ Author
+## 🙋‍♂️ Authors
 
-**Abduvahhobov Javohir**
+**Abduvahhobov Javohir** & **Mansurxojayev Xojiakbar**
 Final Year Project – IoT Internship
 Tashkent Turin Polytechnic University
 
