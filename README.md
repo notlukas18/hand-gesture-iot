@@ -38,40 +38,35 @@ This final-year project demonstrates a smart, contactless interface where users 
 - **MQTT** protocol (using **Mosquitto** broker)
 - **Fritzing** for the wiring diagram
 
----
-
-## ⚙️ Setup Instructions
-
-### 1. ESP32 (Arduino Side)
-
-- Install ESP32 board via **Arduino IDE Board Manager**
-- Upload `led_control_mqtt.ino` to your ESP32
-- Connect LEDs to GPIO pins (see wiring diagram)
-- Set the **MQTT broker IP address** in the code (e.g., local IP of your PC or cloud broker)
-
 
 ### 2. Python Client (Computer Side)
 
 Install dependencies:
 
+```bash
 pip install opencv-python mediapipe paho-mqtt
+````
 
-Edit gesture_control_mqtt.py to set the MQTT broker IP:
+Edit `gesture_control_mqtt.py` to set the MQTT broker IP:
 
+```python
 MQTT_BROKER = "your_broker_ip"
+```
 
 Run the script:
 
+```bash
 python gesture_control_mqtt.py
+```
 
 ### 3. MQTT Broker
 
 You can run Mosquitto locally or on a cloud VM:
 
+```bash
 sudo apt install mosquitto mosquitto-clients
-
 sudo systemctl start mosquitto
-
+```
 
 ---
 
