@@ -1,53 +1,57 @@
-# ✋🤖 Hand Gesture Controlled IoT System  
-**(ESP32 + Python + OpenCV + MediaPipe + MQTT)**
+# ✋🤖 Hand Gesture Controlled IoT System
 
-This final-year project demonstrates a smart, contactless interface where users can control multiple LEDs using hand gestures detected via a webcam. It combines **Computer Vision** (MediaPipe + OpenCV) with **IoT** (ESP32 + MQTT communication), offering a modern, accessible, and touchless solution for smart environments.
+**ESP32 + Python + OpenCV + MediaPipe + MQTT**
 
----
-
-## 📌 Features
-
-- 🖐️ Real-time hand gesture recognition with **MediaPipe**
-- 💡 Individual control of 5 LEDs (Thumb, Index, Middle, Ring, Pinky)
-- 🔄 Universal gestures to turn **all LEDs ON/OFF**
-- 🌐 MQTT communication between **Python client** and **ESP32**
-- 🧱 Modular and scalable design for future **smart home** applications
----
-
-## 🖼️ Demo
-
-![image_2025-05-27_00-38-25](https://github.com/user-attachments/assets/a1754ec2-0746-4499-9113-327430af8fe0)
+This final-year project showcases a **smart, contactless interface** that enables users to control multiple LEDs using hand gestures. Leveraging **Computer Vision** and **IoT**, it offers a modern, accessible, and touchless control solution for smart environments and home automation.
 
 ---
 
+## 🚀 Key Features
 
-## 🧠 How It Works
+* 🖐️ **Real-time hand gesture recognition** using MediaPipe
+* 💡 **Individual control** of five LEDs (Thumb, Index, Middle, Ring, Pinky)
+* 🔄 **Universal gestures** to toggle all LEDs ON/OFF
+* 🌐 **MQTT communication** between Python client and ESP32
+* 🧱 Modular, scalable design for future **smart home integration**
 
-1. **Webcam** captures live video stream  
-2. **MediaPipe** detects hand landmarks in real-time  
-3. **Python** script analyzes gestures and publishes MQTT messages  
-4. **ESP32** subscribes to MQTT topics and toggles LEDs accordingly  
+---
+
+## 🖼️ Demo Preview
+
+![Demo Screenshot](https://github.com/user-attachments/assets/a1754ec2-0746-4499-9113-327430af8fe0)
+
+---
+
+## 🧠 System Overview
+
+1. A **webcam** captures the live video stream
+2. **MediaPipe** detects hand landmarks in real time
+3. A **Python script** processes gestures and sends MQTT messages
+4. The **ESP32** microcontroller receives the messages and toggles LEDs accordingly
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Python 3.11+**
-- **MediaPipe & OpenCV** for gesture detection
-- **ESP32** microcontroller programmed via **Arduino IDE**
-- **MQTT** protocol (using **Mosquitto** broker)
-- **Fritzing** for the wiring diagram
+* **Python 3.11+**
+* **MediaPipe & OpenCV** for gesture detection
+* **ESP32** programmed via **Arduino IDE**
+* **MQTT** protocol with **Mosquitto broker**
+* **Fritzing** for circuit design and wiring diagrams
 
+---
 
-### 2. Python Client (Computer Side)
+## 🖥️ Getting Started
 
-Install dependencies:
+### 1. Python Client (Computer Side)
+
+Install the required dependencies:
 
 ```bash
 pip install opencv-python mediapipe paho-mqtt
-````
+```
 
-Edit `gesture_control_mqtt.py` to set the MQTT broker IP:
+Edit the `gesture_control_mqtt.py` file to specify your MQTT broker IP:
 
 ```python
 MQTT_BROKER = "your_broker_ip"
@@ -59,9 +63,11 @@ Run the script:
 python gesture_control_mqtt.py
 ```
 
-### 3. MQTT Broker
+---
 
-You can run Mosquitto locally or on a cloud VM:
+### 2. MQTT Broker Setup
+
+You can install Mosquitto locally or on a cloud-based virtual machine:
 
 ```bash
 sudo apt install mosquitto mosquitto-clients
@@ -70,43 +76,39 @@ sudo systemctl start mosquitto
 
 ---
 
-## 🧪 Supported Gestures
+## ✋ Supported Hand Gestures
 
-| Gesture          | Action            |
-| ---------------- | ----------------- |
-| All fingers up   | Turn ALL LEDs ON  |
-| All fingers down | Turn ALL LEDs OFF |
-| Thumb only up    | Yellow LED ON     |
-| Index only up    | Red LED ON        |
-| Middle only up   | Green LED ON      |
-| Ring only up     | Blue LED ON       |
-| Pinky only up    | White LED ON      |
-
----
-
-## 🧩 Future Improvements
-
-🎙️ Add voice command functionality
-
-✋ Support multi-hand recognition
-
-📱 Create a mobile app for remote control
-
-🏠 Integrate with platforms like Home Assistant
-
+| Gesture          | Action                 |
+| ---------------- | ---------------------- |
+| All fingers up   | Turn **ALL LEDs ON**   |
+| All fingers down | Turn **ALL LEDs OFF**  |
+| Thumb only up    | Turn ON **Yellow LED** |
+| Index only up    | Turn ON **Red LED**    |
+| Middle only up   | Turn ON **Green LED**  |
+| Ring only up     | Turn ON **Blue LED**   |
+| Pinky only up    | Turn ON **White LED**  |
 
 ---
 
-## 🔒 Ethical and Social Impact
+## 📈 Future Enhancements
 
-* 📷 All video processing is done locally — user privacy preserved
-* ♿ Useful for people with mobility or speech impairments
-* ⚡ Powered by energy-efficient ESP32 microcontroller
-* 🌍 Designed to be inclusive, adaptable across cultures
+* 🎙️ Add **voice command** functionality
+* ✋ Enable **multi-hand gesture** recognition
+* 📱 Build a **mobile app** for remote access
+* 🏠 Integrate with platforms like **Home Assistant** or **Google Home**
 
 ---
 
-## 📝 License
+## 🔒 Ethical & Social Impact
+
+* 📷 All video processing is performed **locally** — ensuring **user privacy**
+* ♿ Highly beneficial for users with **mobility or speech impairments**
+* ⚡ Uses an **energy-efficient ESP32** for minimal power consumption
+* 🌍 Designed to be **inclusive, adaptable**, and globally applicable
+
+---
+
+## 🧾 License
 
 This project is licensed under the [MIT License](LICENSE).
 
@@ -114,15 +116,16 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🤝 Contributing
 
-Pull requests are welcome! If you'd like to improve gesture recognition, UI, or support other hardware, feel free to fork the repo.
+We welcome pull requests!
+If you'd like to improve gesture recognition, expand hardware compatibility, or enhance the interface, feel free to fork the repo and contribute.
 
 ---
 
-## 🙋‍♂️ Authors
+## 👥 Authors
 
-**Abduvahhobov Javohir**
+* **Abduvahhobov Javohir** – Software Development (Python, OpenCV, MQTT)
+* **Mansurxojayev Xojiakbar** – Hardware Design (ESP32, Circuit Wiring)
 
-**Mansurxojayev Xojiakbar**
+> Final Year Project — IoT Internship
+> Tashkent Turin Polytechnic University
 
-Final Year Project – IoT Internship
-Tashkent Turin Polytechnic University
