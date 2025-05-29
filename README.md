@@ -54,7 +54,6 @@ This final-year project demonstrates a smart, contactless interface where users 
 
 Install dependencies:
 
-```bash
 pip install opencv-python mediapipe paho-mqtt
 Edit gesture_control_mqtt.py to set the MQTT broker IP:
 MQTT_BROKER = "your_broker_ip"
