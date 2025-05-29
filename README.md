@@ -55,15 +55,21 @@ This final-year project demonstrates a smart, contactless interface where users 
 Install dependencies:
 
 pip install opencv-python mediapipe paho-mqtt
+
 Edit gesture_control_mqtt.py to set the MQTT broker IP:
+
 MQTT_BROKER = "your_broker_ip"
+
 Run the script:
+
 python gesture_control_mqtt.py
 
 ### 3. MQTT Broker
+
 You can run Mosquitto locally or on a cloud VM:
 
 sudo apt install mosquitto mosquitto-clients
+
 sudo systemctl start mosquitto
 
 
