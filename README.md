@@ -1,17 +1,17 @@
-# ✋🤖 Hand Gesture Controlled IoT System (ESP32 + Python + OpenCV + MediaPipe)
+# ✋🤖 Hand Gesture Controlled IoT System  
+**(ESP32 + Python + OpenCV + MediaPipe + MQTT)**
 
-This project demonstrates a smart, contactless interface where users can control multiple LEDs using hand gestures via a webcam and an ESP32 microcontroller. It combines computer vision (MediaPipe + OpenCV) with IoT (ESP32, HTTP communication) to build a modern, accessible, and touchless system.
+This final-year project demonstrates a smart, contactless interface where users can control multiple LEDs using hand gestures detected via a webcam. It combines **Computer Vision** (MediaPipe + OpenCV) with **IoT** (ESP32 + MQTT communication), offering a modern, accessible, and touchless solution for smart environments.
 
 ---
 
 ## 📌 Features
 
-- Real-time hand gesture recognition using MediaPipe
-- Individual control of 5 LEDs (Thumb, Index, Middle, Ring, Pinky)
-- Turn all LEDs ON/OFF with universal gestures
-- HTTP communication between Python and ESP32
-- Modular and expandable design for smart home systems
-
+- 🖐️ Real-time hand gesture recognition with **MediaPipe**
+- 💡 Individual control of 5 LEDs (Thumb, Index, Middle, Ring, Pinky)
+- 🔄 Universal gestures to turn **all LEDs ON/OFF**
+- 🌐 MQTT communication between **Python client** and **ESP32**
+- 🧱 Modular and scalable design for future **smart home** applications
 ---
 
 ## 🖼️ Demo
@@ -20,44 +20,53 @@ This project demonstrates a smart, contactless interface where users can control
 
 ---
 
+
 ## 🧠 How It Works
 
-1. A webcam captures the video stream.
-2. MediaPipe identifies hand landmarks.
-3. Python processes gestures and sends HTTP requests.
-4. The ESP32 receives the request and activates LEDs accordingly.
+1. **Webcam** captures live video stream  
+2. **MediaPipe** detects hand landmarks in real-time  
+3. **Python** script analyzes gestures and publishes MQTT messages  
+4. **ESP32** subscribes to MQTT topics and toggles LEDs accordingly  
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Python 3.11+**
-- **MediaPipe & OpenCV** for hand gesture detection
-- **ESP32** microcontroller with Arduino
-- **HTTP server on ESP32**
-- **Wiring Diagram made with Fritzing**
+- **MediaPipe & OpenCV** for gesture detection
+- **ESP32** microcontroller programmed via **Arduino IDE**
+- **MQTT** protocol (using **Mosquitto** broker)
+- **Fritzing** for the wiring diagram
 
 ---
 
 ## ⚙️ Setup Instructions
 
-### 1. ESP32 (Arduino)
-- Install ESP32 board in Arduino IDE.
-- Upload `led_control.ino` to your ESP32.
-- Connect LEDs to ESP32 GPIO pins as per the wiring diagram.
-- Connect ESP32 to the same Wi-Fi as your PC.
+### 1. ESP32 (Arduino Side)
 
-### 2. Python Client
-```bash
-pip install opencv-python mediapipe requests
-````
+- Install ESP32 board via **Arduino IDE Board Manager**
+- Upload `led_control_mqtt.ino` to your ESP32
+- Connect LEDs to GPIO pins (see wiring diagram)
+- Set the **MQTT broker IP address** in the code (e.g., local IP of your PC or cloud broker)
 
-* Replace the IP address in `gesture_control.py` with your ESP32’s IP.
-* Run the script:
+
+### 2. Python Client (Computer Side)
+
+Install dependencies:
 
 ```bash
-python gesture_control.py
-```
+pip install opencv-python mediapipe paho-mqtt
+Edit gesture_control_mqtt.py to set the MQTT broker IP:
+MQTT_BROKER = "your_broker_ip"
+Run the script:
+python gesture_control_mqtt.py
+
+### 3. MQTT Broker
+You can run Mosquitto locally or on a cloud VM:
+
+sudo apt install mosquitto mosquitto-clients
+sudo systemctl start mosquitto
+
 
 ---
 
@@ -77,20 +86,24 @@ python gesture_control.py
 
 ## 🧩 Future Improvements
 
-* Replace HTTP with MQTT for real-time efficiency
-* Add voice command integration
-* Support multi-hand recognition
-* Create mobile app for remote control
-* Integrate with platforms like Home Assistant
+🎙️ Add voice command functionality
+
+✋ Support multi-hand recognition
+
+📱 Create a mobile app for remote control
+
+🏠 Integrate with platforms like Home Assistant
+
+☁️ Use cloud MQTT brokers for remote access
 
 ---
 
 ## 🔒 Ethical and Social Impact
 
-* All video processing is done **locally**, preserving user privacy.
-* The system can help users with mobility/speech impairments.
-* Energy-efficient using low-power ESP32 boards.
-* Inclusive design adaptable for different gestures or cultures.
+* 📷 All video processing is done locally — user privacy preserved
+* ♿ Useful for people with mobility or speech impairments
+* ⚡ Powered by energy-efficient ESP32 microcontroller
+* 🌍 Designed to be inclusive, adaptable across cultures
 
 ---
 
@@ -108,6 +121,7 @@ Pull requests are welcome! If you'd like to improve gesture recognition, UI, or 
 
 ## 🙋‍♂️ Authors
 
-**Abduvahhobov Javohir** & **Mansurxojayev Xojiakbar**
+**Abduvahhobov Javohir**
+**Mansurxojayev Xojiakbar**
 Final Year Project – IoT Internship
 Tashkent Turin Polytechnic University
