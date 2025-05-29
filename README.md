@@ -94,7 +94,6 @@ sudo systemctl start mosquitto
 
 🏠 Integrate with platforms like Home Assistant
 
-☁️ Use cloud MQTT brokers for remote access
 
 ---
 
